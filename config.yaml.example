@@ -1,0 +1,29 @@
+# Base URLs
+base_url: "https://admin.example.com"
+login_url: "https://admin.example.com/login"
+employee_search_url: "https://admin.example.com/employees"
+
+# CSS selectors used in automation. Adjust to your site.
+selectors:
+  username_input: "input[name='username']"
+  password_input: "input[name='password']"
+  login_submit: "button[type='submit']"
+
+  # Navigate/search employee
+  search_input: "input[name='employeeId']"
+  search_submit: "button[data-test='search']"
+  employee_row: "tr[data-employee-row]"
+  edit_button: "button[data-test='edit']"
+
+  # Edit POS field
+  pos_input: "input[name='posId']"
+  save_button: "button[type='submit']"
+
+# Optional timeouts (ms)
+timeouts:
+  default: 15000
+  navigation: 20000
+
+# Concurrency and retries
+retries: 2
+retry_backoff_seconds: 2
